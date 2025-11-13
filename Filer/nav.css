@@ -1,7 +1,7 @@
 *{
    padding: 0;
    border: 0;
-   box-sizing: border-box;
+   
 }
 html, body{
     width: 100%;
@@ -13,30 +13,39 @@ nav{
     align-items: center;
     justify-content: space-between;
     background: burlywood;
-    position: relative;
-   
 }
-nav ul{
+nav #menuList{
     position: absolute;
     top: 70px;
-    left: 0;
+    left: auto;
     right: 0;
     flex-direction: column;
     text-align: center;
     background: burlywood;
-    gap: 0;
     overflow: hidden;
-
+    transition: 0.5s;
 }
-nav ul li{
+.hover-funktion{
      padding: 20px;
+     width: 300px;
 }
 a{
     text-decoration: none;
     color: black;
     font-size: 1.7rem;
 }
-#menuList{
-    transition: 0.5s;
+.hover-funktion:hover{
+background: rgb(170, 142, 104);
+}
+@media (max-width: 600px){
+    nav #menuList{
+        left: -50px;  
+    }
+    .hover-funktion{
+        width: 100%;
+    }
+    nav{
+    position: relative;
+    }
 }
 
